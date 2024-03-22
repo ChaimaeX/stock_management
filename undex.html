@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="stock">
+       <div class="head"> <h2>STOCK MANAGEMENT</h2>
+        <h4>Samia Solaire</h4>
+       </div>
+       <div class="imputs">
+       
+         <input placeholder="title" name="title" type="text" id="title">
+          <div id="prix">
+            <input onkeyup="getTotal()" type="number" name="price" id="price"  placeholder="price">
+            <input onkeyup="getTotal()"  type="number" name="qantite" id="qantite"  placeholder="Qte">
+            <small id="total" name="total"></small>
+          </div>
+          
+          <input type="text" placeholder="category" id="category">
+          <button id="submit">create</button>
+        
+       </div>
+       <div class="outputs">
+
+        <div class="searchBlock">
+            <input type="text" id="search" placeholder="search" onkeyup="searchData(this.value)">
+              <div class="btnsearch">
+                <button id="searchTitle" onclick="getSearch(this.id)">Search By Title</button>
+                <button id="searchCategory" onclick="getSearch(this.id)">Search By category</button>
+
+             </div>
+        </div>
+        <div id="deleteAll"></div>
+        <table>
+            <tr>
+                <th>id</th>
+                <th>title</th>
+                <th>price</th>
+                <th> Qte</th>
+                <th> Total</th>
+                <th> category</th>
+                <th>update</th>
+                <th>delete</th>
+            </tr>
+            <tbody id="tbody">
+                
+            </tbody>
+
+        </table>
+       </div>
+    </div>
+    <script src="about.js" ></script>
+</body>
+</html>
